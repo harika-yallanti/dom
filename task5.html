@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array=['Apple', 'Banana', 'Mango']
+        console.log(array);
+        console.log(array[0]);
+       array.push('Orange');//last element is added
+       console.log(array);
+       console.log(array.length);
+       array.unshift('grapes');//first element is added
+       console.log(array);
+       array.shift();//first element is deleted
+       console.log(array);
+        array.pop();//last element is deleted
+       console.log(array);
+
+       //upadte the value in the array
+       array[1]='Orange';
+       console.log('Updated array:' +array)
+       //changing value using index
+       array[2]='Orange';
+       console.log(array);
+    </script>
+</body>
+</html>

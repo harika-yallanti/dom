@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Container where elements will be added-->
+    <div id="MyContainer"></div>
+    <script>
+        //Create the heading element
+        let h1Element=document.createElement("h1");
+        console.log(h1Element);
+        h1Element.textContent="Web Technologies";
+
+        //Get the container div
+        let containerElement=document.getElementById("MyContainer");
+
+        //Append the heading to the container
+        containerElement.appendChild(h1Element);
+
+        //Create a button element
+        let btnElement=document .createElement("button");
+        btnElement.textContent="Change heading";
+
+        //Append the button to the container
+        containerElement.appendChild(btnElement);
+
+        //Optional:Add functionality to change the heading text on button
+        btnElement.onclick=function(){
+            h1Element.textContent="Frontend Development";
+        };
+         
+        
+    </script>
+</body>
+</html>

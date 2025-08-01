@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="info"></p>
+    <script>
+        //simple constructor function
+        function Person(name, age){
+            this.name=name;
+            this.age=age;
+        }
+        //create one object
+        const person1=new Person("alice", 25);
+        const person2=new Person("bob", 30);
+        //display the info
+        document.getElementById("info").innerHTML="Name: "+person1.name+"<br>"+"Age: "+person1.age;
+        //loop through the object properties
+        let loopText="";
+        for(let x in person){
+            loopText+=person[x]+" ";
+        }
+        document.getElementById("byloop").innerHTML="By loop:"
+    </script>
+</body>
+</html>

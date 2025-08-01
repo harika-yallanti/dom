@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    
+    <div id="box">
+      <p>Adults Plain Cotton T-shirt</p> 
+      <p>Price:$7.99</p> 
+      <button type="button" class="one" onclick="hello()">Add to cart</button> 
+      <button type="button" class="two" onclick="hello1()">Buy now</button> 
+    <script>
+        console.log("Welcome!");
+        function hello(){
+              window.alert("Added");
+        }
+         
+        function hello1(){
+              console.log("Loading...");
+              window.alert("Purchased");
+        }
+    </script>
+    <!-- OR whithout using function
+    <div id="box">
+      <p>Adults Plain Cotton T-shirt</p> 
+      <p>Price:$7.99</p> 
+      <button type="button" class="one" onclick="alert('Added')">Add to cart</button> 
+      <button type="button" class="two" onclick="alert('purchased')">Buy now</button> 
+    -->
+</body>
+</html>

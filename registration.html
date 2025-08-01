@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <form id="registrationform">
+    <div class="box" ><h1>Registration Form</h1></div><br><br>
+    <label for="username" id="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="enter username" required><br><br>
+    <label for="password" id="password1">Password:</label>
+    <input type="password" id="password1" name="password" placeholder="enter password" required><br><br>
+    <label for="gender" id="gender">Gender</label><br>
+    <label><input type="radio"  id="gender" name="gender">Male</label>
+    <label><input type="radio"  id="gender" name="gender">Female</label><br><br>
+    <label for="dob" id="dob">Date of Birth</label>
+    <input type="date" id="dob" required><br><br>
+    <label for="address" id="add">Address:</label>
+    <input type="text" id="add" name="address" placeholder="enter your address.." required><br><br>
+    <label>Phone No.<input type="number" required></label><br><br>
+    <button type="submit">Submit</button> 
+    </form>
+    <div id="successmessage">Successfully Registered!</div>
+    <script>
+        const form=document.getElementById("registrationform");
+        const message=document.getElementById("successmessage");
+        form.addEventListener('submit',function(event){
+            event.preventDefault();
+            message.style.display="block";
+            
+        });
+    </script>
+</body>
+</html>

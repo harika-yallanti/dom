@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon shipping</title>
+</head>
+<body>
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="cost" id='cost'>
+    <button type="button" class="ship" onclick="calculateCost()">Calculate</button><br>
+    <p id="ship"></p> 
+    <script>
+        const button=document.querySelector('.ship')
+        function calculateCost()
+        {
+            const input=document.getElementById('cost');
+            const value=Number(input.value);
+            let result ;
+            if(value<40){
+                  result=value+10;
+ 
+            }
+            else{
+                   result=value;
+            }
+            document.getElementById('ship').innerHTML=result;
+         
+        };
+    </script>
+</body>
+</html>

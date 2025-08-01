@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="netflix.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">NETFLIX</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">TV Shows</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">New & Popular</a></li>
+        <li><a href="#">My List</a></li>
+      </ul>
+    </nav>
+    <div class="buttons">
+      
+      <button class="signin" id="signinBtn">Sign In</button>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Unlimited movies, TV shows, and more.</h1>
+      <p>Watch anywhere. Cancel anytime.</p>
+      <button class="cta-btn">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Movies Section -->
+  <section class="movies">
+    <h2>Popular on Netflix</h2>
+    <div class="movie-row">
+      <img src="https://static.toiimg.com/photo/121950828.cms" alt="Movie 1" height="300" width="200">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBdl8r-1SmfA7K1nTTm98v_2Kr-rcc6wKUQA&s" alt="Movie 2" height="300" width="200">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8qz4NjyXzgOGh2-yLHPw8nW2rOZAkc7goxtyxrUpoxdvPXK8kP5FdzDIhU3NOJWx9grw&usqp=CAU" alt="Movie 3" height="300" width="200">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_e3AsDxEKziKeX0pefVq6jl_aC7ZMlyWyiw&s" alt="Movie 4" height="300" width="200">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgZRYkrPNVvS_X9yElu7jmVZ1W_PoznufC1g&s" alt="Movie 5" height="300" width="200">
+    </div>
+  </section>
+   <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Sign In</h2>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Netflix Clone | Built with HTML & CSS</p>
+  </footer>
+  <script>
+    // Get elements
+const modal = document.getElementById("loginModal");
+const signinBtn = document.getElementById("signinBtn");
+const closeBtn = document.querySelector(".close");
+
+// Show modal when "Sign In" clicked
+signinBtn.onclick = () => {
+  modal.style.display = "flex";
+};
+
+// Close modal when "X" clicked
+closeBtn.onclick = () => {
+  modal.style.display = "none";
+};
+
+// Close modal when clicking outside the box
+window.onclick = (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+  </script>
+</body>
+</html>
