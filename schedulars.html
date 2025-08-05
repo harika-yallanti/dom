@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //schedulars execute after a certain time, setInterval, clearTimeout, clearInterval
+
+        //setInterval
+
+    //     let counter=0;
+    //     setInterval(function()
+    // {
+    //     console.log(counter);
+    //     counter=counter+1;
+    // },1000);
+     
+    //clearInterval
+    let counter=0;
+    let timerId=setInterval(function()
+{
+     console.log(counter);
+     counter=counter+1;
+     if(counter > 5)
+     {
+        clearInterval(timerId);                //stop when counter reaches 6
+        console.log("Counter Stopped");       //stop the interval
+     }
+},1000);
+     
+
+    </script>
+</body>
+</html>

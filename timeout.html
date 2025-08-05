@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="setTimeoutBtn">Set Timeout</button>
+    <button id="clearTimeoutBtn">Clear Timeout</button>
+    <script>
+        let setTimeoutBtn=document.getElementById("setTimeoutBtn");
+        let clearTimeoutBtn=document.getElementById("clearTimeoutBtn");
+        let timeoutId=null;
+
+        setTimeoutBtn.onclick=function(){
+            timeoutId=setTimeout(function(){
+                console.log("Hello! This is shown after 5 seconds");
+            },5000); //delay=5000ms= 5sec
+            console.log("Timeout ID:" +timeoutId);
+        }
+
+        clearTimeoutBtn.onclick=function(){
+            clearTimeout(timeoutId);
+            console.log("Timeout cleared");
+        }
+    </script>
+</body>
+</html>
