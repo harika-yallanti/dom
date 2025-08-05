@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Asynchronous JavaScript</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        //after 3 seconds
+        setTimeout(showMessage,3000);
+        function showMessage(){
+            document.getElementById("demo1").innerHTML="get lost!!";
+        }
+        //after 6 seconds
+        setTimeout(function()
+    {
+        showCustomMessage("I want choco!!");
+    },6000);
+    function showCustomMessage(value)
+    {
+        document.getElementById("demo2").innerHTML=value;
+    }
+    //setInterval to show time every second
+    setInterval(showTime,1000);
+    function showTime()
+    {
+        let d=new Date();
+        document.getElementById("demo3").innerHTML=
+        d.getHours().toString().padStart(2, '0')+":"+
+        d.getMinutes().toString().padStart(2, '0')+":"+
+        d.getSeconds().toString().padStart(2, '0');
+    }
+    </script>
+</body>
+</html>
