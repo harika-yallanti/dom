@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Callback in JavaScript
+        //Passing a function as an argument to another function
+        //A callback is a function thtat you pass to another function so that it can be called later when needed
+
+        function displayGreeting(displayName)
+        {
+            console.log("Hello!");
+            displayName();             //callback function call
+            console.log('Good Morning');
+        }
+              //Method-1
+        function displayRahul()
+        {
+            console.log("Rahul");
+        }
+        displayGreeting(displayRahul);
+                    // Method-2  (or)
+        // displayGreeting(function() {
+        //     console.log("Rahul");
+        // });
+        
+    </script>
+</body>
+</html>
